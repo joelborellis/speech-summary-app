@@ -12,7 +12,7 @@ if "%errorlevel%" neq "0" (
 echo.
 echo Restoring frontend npm packages
 echo.
-cd ../frontend
+cd frontend
 call npm install
 if "%errorlevel%" neq "0" (
     echo Failed to restore frontend npm packages
@@ -31,7 +31,7 @@ if "%errorlevel%" neq "0" (
 echo.
 echo Starting backend
 echo.
-cd ../backend
+cd ..
 start http://localhost:5000
 call python ./app.py
 if "%errorlevel%" neq "0" (
