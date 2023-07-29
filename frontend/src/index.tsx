@@ -4,12 +4,14 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import './index.css';
 
 import Layout from "./pages/layout/Layout";
+import Chat from "./pages/chat/Chat";
 
 export default function App() {
   return (
       <HashRouter>
           <Routes>
               <Route path="/" element={<Layout />}>
+              <Route index element={<Chat />} />
               </Route>
           </Routes>
       </HashRouter>
