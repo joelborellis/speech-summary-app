@@ -61,7 +61,7 @@ export const QuestionInput = ({ onSend, disabled, placeholder, clearOnSend }: Pr
                 { sendQuestionDisabled ? 
                     <SendRegular className={styles.questionInputSendButtonDisabled}/>
                     :
-                    <img src={Send} className={styles.questionInputSendButton}/>
+                    <img src={Send} className={styles.questionInputSendButton} alt="Send"/>
                 }
             </div>
             <div className={styles.questionInputBottomBorder} />
