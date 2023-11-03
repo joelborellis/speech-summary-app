@@ -22,7 +22,7 @@ const Chat = () => {
             <Stack horizontal className={styles.chatRoot}>
                 <div className={styles.chatContainer}>
                     <Stack className={styles.chatEmptyState}>
-                                    <h1 className={styles.chatEmptyStateTitle}>Coming Soon</h1>
+                                    <h1 className={styles.chatEmptyStateTitle}>Shadow</h1>
                                     <h2 className={styles.chatEmptyStateSubtitle}>Commencement Speech Chatbot</h2>
                     </Stack>
                     
