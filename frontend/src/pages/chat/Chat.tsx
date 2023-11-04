@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Stack } from "@fluentui/react";
 import { SquareRegular } from "@fluentui/react-icons";
 import styles from "./Chat.module.css";
@@ -94,6 +94,10 @@ const Chat = () => {
         setIsLoading(false);
       };
     
+    useEffect(
+        () => chatMessageStreamEnd.current?.scrollIntoView({ behavior: "smooth" }),
+        [showLoadingMessage]
+      );
 
     return (
         <div className={styles.container}>
@@ -124,9 +128,23 @@ const Chat = () => {
                                     ) : null}
                                 </>
                             ))}
-                            <div ref={chatMessageStreamEnd} />
-                        </div>
-                    )}
+                            
+
+                        {showLoadingMessage && (
+                                        <>
+                                            <div className={styles.chatMessageUser}>
+                                            <div className={styles.chatMessageUserMessage}>
+                                                {lastQuestionRef.current}
+                                            </div>
+                                            </div>
+                                            <div className={styles.chatMessageAssistantMessage}>
+                                                {"Generating answer..."}                                             
+                                            </div>
+                                        </>
+                                        )}
+                                        <div ref={chatMessageStreamEnd} />
+                                    </div>
+                                    )}
 
                     {isLoading && (
                         <Stack

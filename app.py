@@ -69,16 +69,14 @@ def conversation_with_data(request):
                                 "endpoint": os.environ.get("AZURE_SEARCH_ENDPOINT"),
                                 "key": os.environ.get("AZURE_SEARCH_ADMIN_KEY"),
                                 "indexName": os.environ.get("AZURE_SEARCH_INDEX"),
-                                "stream": False,
                             }
                         }
-                    ]
+                    ],
+                    stream=False,
                 )
     print(json.dumps(chat_completion).replace("\n", "\\n"))
     #return (chat_completion["choices"][0]["messages"][1]["content"])
     return Response(json.dumps(chat_completion).replace("\n", "\\n"), status=200)
-
-
 
 @app.route("/", defaults={"path": "index.html"})
 @app.route("/<path:path>")
