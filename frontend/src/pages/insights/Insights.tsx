@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { Stack } from "@fluentui/react";
 import { SquareRegular } from "@fluentui/react-icons";
-import styles from "./Chat.module.css";
+import styles from "./Insights.module.css";
 import { QuestionInput } from "../../components/QuestionInput";
 import {
     ChatMessage,
@@ -12,7 +12,7 @@ import {
 
 
 
-const Chat = () => {
+const Insights = () => {
 
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [showLoadingMessage, setShowLoadingMessage] = useState<boolean>(false);
@@ -105,8 +105,8 @@ const Chat = () => {
                 <div className={styles.chatContainer}>
                     {!lastQuestionRef.current ? (
                         <Stack className={styles.chatEmptyState}>
-                            <h1 className={styles.chatEmptyStateTitle}>Shadow Chat</h1>
-                            <h2 className={styles.chatEmptyStateSubtitle}>Shadow Chat</h2>
+                            <h1 className={styles.chatEmptyStateTitle}>Shadow Insights</h1>
+                            <h2 className={styles.chatEmptyStateSubtitle}>Shadow Insights</h2>
                         </Stack>
                     ) : (
                         <div
@@ -185,4 +185,4 @@ const Chat = () => {
     );
 };
 
-export default Chat;
+export default Insights;

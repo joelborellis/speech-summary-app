@@ -5,7 +5,7 @@
 }
 
 .header {
-    background-color: #086d76;
+    background-color: #000000;
 }
 
 .headerContainer {
@@ -30,4 +30,16 @@
     display: flex;
     align-items: flex-end;
     color: #ffffff;
+}
+
+.shadowTitle {
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: flex-end;
+    color: #ffffff;
+    margin-right: 60px;
 }
