@@ -1,4 +1,5 @@
 Flask==2.3.2
+flask[async]
 openai
 requests
 python-dotenv

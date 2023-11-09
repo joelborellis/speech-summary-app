@@ -6,7 +6,7 @@ import { QuestionInput } from "../../components/QuestionInput";
 import {
     ChatMessage,
     ConversationRequest,
-    conversationApi,
+    insightsApi,
     ChatResponse,
 } from "../../api";
 
@@ -40,7 +40,8 @@ const Insights = () => {
 
         let result = {} as ChatResponse;
         try {
-            const response = await conversationApi(request, abortController.signal);
+            // response will be a Flask Response Object
+            const response = await insightsApi(request, abortController.signal);
             if (response?.body) {
                 const reader = response.body.getReader();
                 let runningText = "";

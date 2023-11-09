@@ -6,7 +6,7 @@ import { QuestionInput } from "../../components/QuestionInput";
 import {
     ChatMessage,
     ConversationRequest,
-    conversationApi,
+    chatApi,
     ChatResponse,
 } from "../../api";
 
@@ -40,7 +40,7 @@ const Chat = () => {
 
         let result = {} as ChatResponse;
         try {
-            const response = await conversationApi(request, abortController.signal);
+            const response = await chatApi(request, abortController.signal);
             if (response?.body) {
                 const reader = response.body.getReader();
                 let runningText = "";

@@ -5,7 +5,7 @@
     right: 0%;
     top: 0%;
     bottom: 0%;
-    background: #eeb3b3;
+    background: #f0f0f0;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14), 0px 0px 2px rgba(0, 0, 0, 0.12);
     border-radius: 8px;
 }
@@ -44,7 +44,7 @@
     height: 4px;
     left: 0%;
     bottom: 0%;
-    background: radial-gradient(106.04% 106.06% at 100.1% 90.19%,#9a9a9a 33.63%,#ceb4aa 100%);
+    background: radial-gradient(106.04% 106.06% at 100.1% 90.19%,#c5ccfc 33.63%,#1315a2 100%);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }

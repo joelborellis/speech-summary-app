@@ -14,11 +14,11 @@ const Layout = (props: any) => {
                             </div>
                         </Link>
                         <Link to="/" className={styles.headerTitleContainer}>
-                            <h3 className={styles.headerTitle}>Shadow Chat</h3>
-                        </Link>
-                        <Link to="/insights" className={styles.headerTitleContainer}>
                             <h3 className={styles.headerTitle}>Shadow Insights</h3>
                         </Link>
+                        <Link to="/chat" className={styles.headerTitleContainer}>
+                            <h3 className={styles.headerTitle}>Shadow Chat</h3>
+                        </Link>                 
                     </Stack>
                 </div>
             </header>
